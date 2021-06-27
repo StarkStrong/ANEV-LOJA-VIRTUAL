@@ -8,7 +8,7 @@ export const login = (usuario, senha) => {
 }
 
 export const listagem = () => {
-  return axios.get(`${process.env.REACT_APP_API_URL}/listagem`)
+  return axios.get(`${process.env.REACT_APP_API_URL}/lista/produtos`)
 }
 
 export const detalhes = (id, token) => {
@@ -24,7 +24,7 @@ export const detalhes = (id, token) => {
 
 export const adicionar = (produto, token) => {
   return axios.post(
-    `${process.env.REACT_APP_API_URL}/cadastrar`,
+    `${process.env.REACT_APP_API_URL}/admin/produtos`,
     produto,
     {
       headers: {
@@ -36,7 +36,7 @@ export const adicionar = (produto, token) => {
 
 export const editar = (produto, token) => {
   return axios.put(
-    `${process.env.REACT_APP_API_URL}/alterar`,
+    `${process.env.REACT_APP_API_URL}/admin/produtos`,
     produto,
     {
       headers: {
@@ -46,12 +46,12 @@ export const editar = (produto, token) => {
   )
 }
 
-export const apagar = (_id, token) => {
+export const apagar = (id, token) => {
   return axios.delete(
-    `${process.env.REACT_APP_API_URL}/deletar`,
+    `${process.env.REACT_APP_API_URL}/admin/produtos`,
     {
       params: {
-        _id
+        id
       },
       headers: {
         Authorization: token

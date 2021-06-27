@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {adicionar, detalhes, editar} from "../services/database";
 import {Button, Container, TextField, Typography} from "@material-ui/core";
 import {Link, Redirect} from "react-router-dom";
+import './designe.css';
 
 const Cadastrar = () => {
   const [nome, setNome] = useState('');
@@ -13,7 +14,7 @@ const Cadastrar = () => {
 
   const token = localStorage.getItem('token');
 
-  const produto = localStorage.getItem('id')
+  const produto = localStorage.getItem('_id')
 
   useEffect(() => {
     if (produto) {
@@ -29,7 +30,7 @@ const Cadastrar = () => {
     }
 
     return () => {
-      localStorage.removeItem('id');
+      localStorage.removeItem('_id');
     };
   }, []);
 
@@ -46,7 +47,7 @@ const Cadastrar = () => {
         quantidade,
       }, token).then(response => {
         alert(response.data);
-        localStorage.removeItem('id');
+        localStorage.removeItem('_id');
         setCadastrado(true);
       }).catch(error => {
         alert(error);
@@ -73,9 +74,9 @@ const Cadastrar = () => {
   }
 
   return (
-    <Container>
+    <Container className="fundobranco pd10">
       <Typography variant="h4">
-        Cadastrar produto
+        NOVO PRODUTO
       </Typography>
       <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column", textAlign: "center"}}>
         <br />
@@ -129,6 +130,8 @@ const Cadastrar = () => {
             type="submit"
             color="primary"
             variant="outlined"
+            fullWidth
+          
           >
             Cancelar
           </Button>

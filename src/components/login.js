@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {login} from "../services/database";
 import { Redirect } from 'react-router-dom';
 import {Button, Container, TextField, Typography} from "@material-ui/core";
+import './designe.css';
 
 const Login = () => {
   const [senha, setSenha] = useState('');
@@ -31,7 +32,9 @@ const Login = () => {
   }
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm"
+    className="fundobranco pd10"
+    >
       <Typography variant="h4">
         Login
       </Typography>

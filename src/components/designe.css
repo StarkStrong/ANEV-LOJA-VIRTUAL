@@ -1,0 +1,49 @@
+
+.central{     text-align: center; }
+
+
+.corlogin{     background-color: rgb(15, 18, 61) !important;
+    color:rgb(255, 255, 255) !important;
+    font-weight: bold !important; 
+
+} 
+
+
+.bt-edit{     background-color: rgb(18, 17, 63) !important;
+
+}  
+
+
+.bt-del{     background-color: rgb(48, 77, 109) !important; 
+
+}
+
+.cortexto{     background-color: rgb(20, 39, 59) !important;
+     
+
+}
+
+.btncadastrar{background-color: rgb(48, 77, 109) !important; 
+    font-weight: bold !important; 
+    color:rgb(255, 255, 255) !important;
+}
+
+.fundobranco{background-color: rgb(245, 245, 245);
+
+}
+
+.pd10{padding: 30px;border-radius: 1%;
+
+}
+
+.mt10{margin-bottom: 30px;
+
+}
+
+.btnedit{     background-color: rgb(68, 66, 155) !important;
+    color:rgb(255, 255, 255) !important;
+    font-weight: bold !important; 
+
+}
+
+.float{float:right; margin-top: 5px !important;}
