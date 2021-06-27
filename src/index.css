@@ -1,6 +1,11 @@
 body {
     margin: 0;
     padding: 2em;
+    
+    background-image: url("./components/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
 }
 
 .header {

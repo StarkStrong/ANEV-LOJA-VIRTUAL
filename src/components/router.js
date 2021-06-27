@@ -1,4 +1,5 @@
 import React from "react";
+import './designe.css';
 import {
   BrowserRouter,
   Switch,
@@ -23,7 +24,9 @@ const Router = () => {
           <Cadastrar />
         </Route>
         <Route path="/">
-          <Listagem />
+          <Listagem 
+          className="fundobranco"
+          />
         </Route>
       </Switch>
     </BrowserRouter>

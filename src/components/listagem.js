@@ -5,6 +5,8 @@ import { DataGrid } from '@material-ui/data-grid';
 import {Button, Container, Typography} from "@material-ui/core";
 import Confirmacao from "./confirmacao";
 import {Redirect} from "react-router-dom";
+import './designe.css';
+
 
 const Listagem = () => {
   const [editar, setEditar] = useState(false);
@@ -70,7 +72,7 @@ const Listagem = () => {
   }
 
   const editarProduto = (id) => {
-    localStorage.setItem('id', id);
+    localStorage.setItem('_id', id);
     setEditar(true);
   }
 
@@ -85,15 +87,17 @@ const Listagem = () => {
           <div>
             <Button
               variant="contained"
+              className="btnedit"
               onClick={() => editarProduto(params.id)}
             >
-              Editar
+              EDITAR
             </Button>
             <Button
               variant="contained"
+              className="corlogin"
               onClick={() => alertaApagar(params.id)}
             >
-              Excluir
+              EXCLUIR
             </Button>
           </div>
         )
@@ -108,14 +112,18 @@ const Listagem = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container
+      className="fundobranco pd10"
+      >
         <br />
         <Typography className="produto-titulo" variant="h5">
           Produtos
         </Typography>
         <br />
         <div style={{ height: 600, width: '100%' }}>
-          <DataGrid rows={produtos} columns={columns} pageSize={10} rowHeight={100} />
+          <DataGrid rows={produtos} columns={columns} pageSize={10} rowHeight={100}
+          className="fundobranco"
+          />
         </div>
       </Container>
       {
@@ -127,7 +135,7 @@ const Listagem = () => {
           negative="Cancelar"
           onAceept={() => apagarProduto()}
           onClose={() => setConfirmar(false)}
-          message="Deseja realmente excluír o produto selecionado?"
+          message="Quer mesmo excluir?"
         />
       }
     </>
